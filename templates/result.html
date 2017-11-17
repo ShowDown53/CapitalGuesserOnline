@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Rezultat ugibanja
+{% endblock title %}
+
+{% block content %}
+{% if result %}
+<h3>Bravo, tvoj odgovor je pravilen! Glavno mesto države {{c.name}} je resnično {{c.capital}}.</h3>
+{% else %}
+<h2>Napačen odgovor! Glavno mesto države {{c.name}} je {{c.capital}}!</h2>
+{% endif %}
+<p>Poglej si to čudovito sliko mesta {{c.capital}}
+</br>
+</br>
+<img src="{{c.image}}"/>
+</br>
+</br>
+<a href="/">Poskusi ponovno</a>
+{% endblock content %}
